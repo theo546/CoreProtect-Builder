@@ -4,9 +4,9 @@ This repository automatically builds the latest version of [CoreProtect](https:/
 
 ## How it works
 
-1.  A GitHub Action runs every hour.
+1.  A GitHub Action runs every day.
 2.  It checks the latest commit on the official CoreProtect repository.
-3.  Since it performs a **Smart Build Check**:
+3.  It checks if a build is necessary:
     *   It checks for the latest existing release in this repository.
     *   If no release exists (first run), it builds.
     *   If a release exists, it compares the git diff between the last built SHA and the current upstream SHA.
