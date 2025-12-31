@@ -1,0 +1,35 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Minecraft-style pixelated hammer, angled -->
+  <g transform="translate(100,100) rotate(30) translate(-100,-100)">
+    
+    <!-- Hammer Head (Pixelated Iron Block Style) -->
+    <!-- Top face -->
+    <rect x="50" y="50" width="20" height="20" fill="#A8A8A8"/>
+    <rect x="70" y="50" width="20" height="20" fill="#B8B8B8"/>
+    <rect x="90" y="50" width="20" height="20" fill="#C8C8C8"/>
+    <rect x="110" y="50" width="20" height="20" fill="#B8B8B8"/>
+    <rect x="130" y="50" width="20" height="20" fill="#A8A8A8"/>
+    
+    <!-- Bottom face of head -->
+    <rect x="50" y="70" width="20" height="20" fill="#888888"/>
+    <rect x="70" y="70" width="20" height="20" fill="#989898"/>
+    <rect x="90" y="70" width="20" height="20" fill="#A8A8A8"/>
+    <rect x="110" y="70" width="20" height="20" fill="#989898"/>
+    <rect x="130" y="70" width="20" height="20" fill="#888888"/>
+    
+    <!-- Handle (Oak Wood Style) -->
+    <rect x="90" y="90" width="20" height="20" fill="#8B5A2B"/>
+    <rect x="90" y="110" width="20" height="20" fill="#A0652F"/>
+    <rect x="90" y="130" width="20" height="20" fill="#8B5A2B"/>
+    <rect x="90" y="150" width="20" height="20" fill="#704923"/>
+    
+  </g>
+  
+  <!-- Subtle pixel grid overlay for effect -->
+  <defs>
+    <pattern id="pixel_grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+</svg>

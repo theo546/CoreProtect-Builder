@@ -1,4 +1,16 @@
-# CoreProtect Builder
+<div align="center">
+  <img src="logo.svg" width="120" height="120" alt="CoreProtect Builder Logo">
+  <h1>CoreProtect Builder</h1>
+
+  <p>
+    <a href="https://github.com/theo546/CoreProtect-builder/releases/download/nightly/coreprotect.jar">
+      <img src="https://img.shields.io/badge/Download-Latest%20Build-blue?style=for-the-badge&logo=github" alt="Download Latest Build">
+    </a>
+  </p>
+  <p>
+    <a href="https://github.com/theo546/CoreProtect-builder/releases/download/nightly/coreprotect.jar"><strong>Direct Download (coreprotect.jar)</strong></a>
+  </p>
+</div>
 
 This repository automatically builds the latest version of [CoreProtect](https://github.com/PlayPro/CoreProtect) and releases it as a pre-release.
 

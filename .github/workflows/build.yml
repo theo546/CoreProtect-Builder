@@ -31,7 +31,7 @@ jobs:
           fi
 
           # Get the latest release to compare against
-          LATEST_RELEASE=$(gh release list --limit 1 --repo ${{ github.repository }} --json tagName --jq '.[0].tagName')
+          LATEST_RELEASE=$(gh release list --limit 10 --repo ${{ github.repository }} --json tagName --jq '.[] | select(.tagName | startswith("build-")) | .tagName' | head -n 1)
           
           if [ -z "$LATEST_RELEASE" ]; then
             echo "No previous releases found. First run? Proceeding with build."
@@ -115,3 +115,17 @@ jobs:
             echo "Deleting old release: $tag"
             gh release delete "$tag" --repo ${{ github.repository }} --yes --cleanup-tag
           done
+
+      - name: Update Nightly Release
+        if: steps.check.outputs.exists == 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Delete existing nightly release and tag if they exist
+          gh release delete nightly --repo ${{ github.repository }} --yes --cleanup-tag || true
+          
+          # Create new nightly release
+          gh release create nightly coreprotect.jar --repo ${{ github.repository }} \
+            --title "Nightly Build" \
+            --notes "Latest automated build. Updated daily." \
+            --prerelease
