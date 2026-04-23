@@ -26,7 +26,7 @@ This repository automatically builds the latest version of [CoreProtect](https:/
 4.  If a build is required:
     *   Clones the repository.
     *   Patches `pom.xml` to set the branch to `development`.
-    *   Builds the JAR using Maven (JDK 21).
+    *   Builds the JAR using Maven.
     *   Creates a new GitHub Release with the tag `build-<commit-hash>`.
     *   Uploads the `coreprotect.jar`.
     *   **Cleanup**: Automatically deletes old releases to keep only the 5 most recent ones.
